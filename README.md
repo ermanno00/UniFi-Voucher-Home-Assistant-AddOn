@@ -1,20 +1,43 @@
-# Unifi ticket system for Home Assistant
+# UniFi Voucher System for Home Assistant
 
 ### Summary
-A simple add-on to create tickets using the Unifi ticket system. 
-
-Copy all files to your hassio installation in the addons folder (in a new folder called unifi_tikets). More information: https://developers.home-assistant.io/docs/add-ons/tutorial/
-
-Step two is go to you Home assistant and go to add-ons. Click add-on store and then refresh repositories. The add-on should now show up and you should be able to install it. Fill in the configuration before starting the add-on.
+A simple add-on to create tickets using your UniFi Controller or UniFiOS (UDM - UDM Pro). 
 
 The add-on is Ingress compatible so runs from wherever you're able to connect to your installation.
 
-### Usage
+### Installation
+- Copy _unifi_tickets_ folder into the _addons_ folder of home assistant
+- Go to you Home assistant and go to add-ons:  https://my.home-assistant.io/redirect/supervisor_store/
+- On the top right overflow menu, click the "Check for updates" button 
+- The add-on should now show up, so you should be able to install it
+- Fill in the configuration before starting the add-on
 
-Make sure to fill in the configuration with the url/ip address of your unifi controller and provide your password for the controller (or create a new user in the controller). Has been tested with v5 of the controller.
+### Configuration
+
+Configuration example:
+![](image.png)
+
+- `ControllerURL`		-- the address of the controller host; IP or name
+- `Username`	-- the username to log in with
+- `Password`	-- the password to log in with
+- `Port`		-- the port of the controller host (if necessary)
+- `Version`	-- the base version of the controller API [v4|v5|unifiOS|UDMP-unifiOS]
+- `site_id`	-- the site ID to access
+- `ValidSSL`	-- Verify the controllers SSL certificate, default=True, can also be False"
+
+### Screenshot
+
+- `Dashboard`
+![](dashboard.png)
+- `Create voucher`
+![](create.png)
+
 
 ### Credits
-Using: 
+
+Remake of: https://github.com/kbruurs/unifi-hassio
+
+Using:
 
 PyUnifi https://github.com/finish06/pyunifi
 

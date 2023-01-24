@@ -1,0 +1,33 @@
+{
+  "name": "Unifi Wi-Fi Voucher",
+  "version": "1.1.2",
+  "slug": "unifiticketsystem",
+  "description": "Create tickets to use for guests",
+  "url": "https://github.com/ermanno00/UniFi-Voucher-Home-Assistant-AddOn",
+  "startup": "once",
+  "boot": "manual",
+  "ingress": true,
+  "init": false,
+  "options": {
+    "ControllerURL": "example.com",
+    "Login": 
+    { "Username": "user", "Password": "123456" }
+    ,
+    "Port": 8443,
+    "Version": "v5",
+    "SiteID": "default",
+    "ValidSSL": true
+  }
+  ,
+  "schema": {
+    "ControllerURL": "str",
+    "Login": 
+      { "Username": "str", "Password": "str" }
+    ,    
+    "Port": "int",
+    "Version": "str",
+    "SiteID": "str",
+    "ValidSSL": "bool"
+  }, 
+  "arch": ["amd64", "armv7", "armhf", "i386" , "aarch64"]
+}
